@@ -1,3 +1,9 @@
+:root {
+  --white-text: #fff8f2;
+  --fondo: #17181d;
+  --yellow-box: #e09145;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,91 +12,82 @@
   box-sizing: border-box;
 }
 body {
-  background: #17181d;
-  color: #fff8f2;
+  background: var(--fondo);
+  color: var(--white-text);
 }
 
 /**-------------------------menu--------------------*/
-nav {
-  /* background: #2fcdcd; */
-  height: 80px;
+.container__nav {
   width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2em;
 }
-
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-nav ul li a {
-  color: #fff8f2;
-  font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-li a:hover {
-  background: #e09145;
-  color: #17181d;
-  transition: 0.5s;
-}
-.checkbtn {
-  font-size: 30px;
-
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
+.hamburger {
   display: none;
 }
-#check {
-  display: none;
+.nav__bar ul {
+  display: flex;
 }
-
+.nav__bar ul li a {
+  display: block;
+  color: var(--white-text);
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.nav__bar ul li a:hover {
+  background: var(--yellow-box);
+  color: var(--fondo);
+}
 @media (max-width: 952px) {
-  nav ul li a {
-    font-size: 16px;
+  .nav__bar ul li a {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 858px) {
-  .checkbtn {
+@media (max-width: 650px) {
+  .hamburger {
     display: block;
+    cursor: pointer;
   }
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #292c35;
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white-text);
+    margin: 6px 0;
+  }
+  .nav__bar {
+    position: absolute;
     top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
+    left: 1;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-color: var(--fondo);
+    transition: 0.2s;
   }
-  nav ul li {
+
+  .nav__bar ul  {
     display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  li a:hover {
-    background: #e09145;
-    color: #17181d;
+    width: fit-content;
+    margin: 3em auto 0 auto;
+    text-align: center;
+    transition: 0.3s;
 
-    transition: 0.5s;
   }
-  #check:checked ~ ul {
-    left: 0;
-    /* position: absolute; */
+  .nav__bar ul li a {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
+
+  .desactive{
+    display: none;
+  }
+
 }
-
 /**-----------------------NOMBRE -------------------------***/
 .presetation__container {
   text-align: center;
@@ -135,11 +132,12 @@ li a:hover {
 }
 .contact__container a {
   padding: 6px;
-  color: #fff8f2;
+  color: var(--white-text);
+  border-radius: 10px;
 }
 .contact__container a:hover {
-  background: #e09145;
-  color: #17181d;
+  background: var(--yellow-box);
+  color: var(--fondo);
   transition: 0.5s;
   border-radius: 10px;
 }
@@ -184,18 +182,18 @@ li a:hover {
   border-radius: 5px;
 }
 .descrip__cv a {
-  color: #fff8f2;
+  color: var(--white-text);
   font-size: 18px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
 .descrip__cv:hover {
-  background: #e09145;
+  background: var(--yellow-box);
   transition: 0.5s;
 }
 .descrip__cv a:hover {
-  color: #17181d;
+  color: var(--fondo);
   font-weight: 600;
   transition: 0.5s;
 }
@@ -226,7 +224,7 @@ li a:hover {
   margin: 1em;
   height: 0.25em;
   border: none;
-  background: #e09145;
+  background: var(--yellow-box);
 }
 .title-box h3 {
   font-weight: 500;
@@ -251,9 +249,8 @@ li a:hover {
   text-align: center;
 }
 
-
 /*-----------------------footer *---------------------*/
-.footer{
+.footer {
   margin-top: 2em;
   padding: 1em;
   font-size: 12px;

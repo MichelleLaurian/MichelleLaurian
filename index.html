@@ -17,21 +17,22 @@
 </head>
 
 <body>
-  <nav id="home">
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <a href="#" class="">
+  <div id="" class="container__nav">
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <nav class="nav__bar desactive" >
+      <ul>
+        <li><a class="linkNav" href="#home">HOME</a></li>
+        <li><a class="linkNav" href="#cv">CURRICULUM</a></li>
+        <li><a class="linkNav" href="#project">PROYECTOS</a></li>
 
-    </a>
-    <ul>
-      <li><a class="" href="#home">HOME</a></li>
-      <li><a href="#cv">CURRICULUM</a></li>
-      <li><a href="#project">PROYECTOS</a></li>
+      </ul>
 
-    </ul>
-  </nav>
+    </nav>
+  </div>
   <div class="presetation__container">
     <article class="presentation__t">
       <p class="presentation__title">Hola soy Michelle</p>
@@ -55,7 +56,7 @@
   </div>
 
   <div id="cv" class="container__cv">
-  
+
     <div class="cv">
       <p>Curriculum</p>
     </div>
@@ -97,7 +98,8 @@
         </div>
       </div>
       <div class="info">
-        <span>El código de esta pagina esta en mi <a href="#" target="_blank" rel="noopener noreferrer"><b>repositorio en GitHub</b></a>. Esta es la primera versión y seguire mejorando esta página.</span>
+        <span>El código de esta pagina esta en mi <a href="#" target="_blank" rel="noopener noreferrer"><b>repositorio
+              en GitHub</b></a>. Esta es la primera versión y seguire mejorando esta página.</span>
       </div>
     </div>
     <div class="blog">
@@ -135,7 +137,7 @@
     </div>
 
     <!-- <p class="disclaimer">All pictures were taken from <a class="disclaimer__link" href="https://unsplash.com/" target="_blank">Unsplash.</a></p> -->
-  
+
 
   </div>
   <div class="footer">
@@ -143,6 +145,7 @@
     <p>Pagina en proceso, ante cualquier duda mi numero de contacto esa en el cv.</p>
 
   </div>
-</body>
 
+</body>
+<script src="./scripts/navbar.js"></script>
 </html>
